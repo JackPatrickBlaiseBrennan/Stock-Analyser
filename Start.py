@@ -1,11 +1,12 @@
 from Downloader import Downloader
 
 
-import Downloader
+from Downloader import *
+from StockAnalyser import *
 
 def start():
-    Downloader()
-    
+    downloader = Downloader()
+    StockAnalyser(downloader.getTickers())
 
 if __name__ == "__main__":
     start()
